@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom:5px;
+        }
+
+        input {
+            width: 100%;
+            padding:10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:#45a049;
+        }
+    </style>
+    <title>Weather Search Form</title>
+</head>
+<body>
+    <div class='form'>
+    <form action="/weather_app" method='post'>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <label for="units">Units:</label>
+        <select id="units" name="units">
+            <option value="metric">Metric</option>
+            <option value="imperial">Imperial</option>
+            <option value="standard">Standard</option>
+        </select>
+        <label for="apiKey">API Key:</label>
+        <input type="text" id="apiKey" name="apiKey" required>
+        <button type="submit">Search</button>
+    </form>
+    <div>
+</body>
+</html>
