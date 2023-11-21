@@ -16,7 +16,8 @@ def get_weather_app():
     }
     response=requests.get(url,params=param)
     data=response.json()
-    return f"data:{data}"
+    city=data['name']
+    return f"data:{data},city:{city}"
     
 if __name__=="__main__":
     app.debug = True
